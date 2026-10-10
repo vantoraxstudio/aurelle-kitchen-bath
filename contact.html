@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Consultation | Contact AURELLE Kitchen &amp; Bath (Demo)</title>
+  <meta name="description" content="Try the AURELLE consultation request form for kitchen and bathroom projects. This is a static portfolio demonstration: the form validates entries but sends nothing.">
+  <meta name="theme-color" content="#203B32">
+  <!-- CANONICAL: replace YOUR-DOMAIN and uncomment after deployment. -->
+  <!-- <link rel="canonical" href="https://YOUR-DOMAIN/contact.html"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Request a Consultation — AURELLE Kitchen &amp; Bath">
+  <meta property="og:description" content="A demonstration consultation form for a fictional remodeling concept.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.className += " js";</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="AURELLE Kitchen &amp; Bath — home"><span class="brand__name">AURELLE</span><span class="brand__desc">Kitchen &amp; Bath</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="nav-toggle__bars"></span></button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="kitchen-remodeling.html">Kitchens</a></li>
+          <li><a class="nav__link" href="bathroom-remodeling.html">Bathrooms</a></li>
+          <li><a class="nav__link" href="custom-cabinetry.html">Cabinetry</a></li>
+          <li><a class="nav__link" href="projects.html">Projects</a></li>
+          <li><a class="nav__link" href="process.html">Process</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+        </ul>
+        <div class="nav__cta"><a class="btn btn--primary btn--sm" href="contact.html" aria-current="page">Request a Consultation</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero page-hero--dark" aria-labelledby="page-title">
+      <div class="container page-hero__grid">
+        <div class="page-hero__text">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span>Contact</nav>
+          <p class="eyebrow">Contact</p>
+          <h1 id="page-title">Tell us about the room you want to love.</h1>
+          <p class="lead">Share a few details about your project. The more you tell us about how you use the space, the more useful the first conversation can be.</p>
+        </div>
+        <figure class="media ratio-4x3">
+          <img src="https://images.unsplash.com/photo-1769326541248-5e09a8ace25b?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" width="1200" height="900" fetchpriority="high" alt="Warm contemporary kitchen with an island" data-fallback="Kitchen concept image">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container contact-layout">
+        <div class="form-panel">
+          <h2 id="form-title">Consultation request</h2>
+          <p class="muted">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+          <div class="note-box" style="margin-bottom:1.5rem"><strong>Demonstration only.</strong> This static portfolio site does not send, store or transmit anything you type. The form checks your entries and shows a message.</div>
+
+          <form id="consultation-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-control" type="text" id="fullName" name="fullName" autocomplete="name" required aria-describedby="error-fullName">
+                <p class="field-error" id="error-fullName"></p>
+              </div>
+              <div class="form-field">
+                <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-control" type="email" id="email" name="email" autocomplete="email" required aria-describedby="error-email">
+                <p class="field-error" id="error-email"></p>
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone number <span class="optional">(optional)</span></label>
+                <input class="form-control" type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="error-phone">
+                <p class="field-error" id="error-phone"></p>
+              </div>
+              <div class="form-field">
+                <label for="projectType">Project type <span class="req" aria-hidden="true">*</span></label>
+                <select class="form-control" id="projectType" name="projectType" required aria-describedby="error-projectType">
+                  <option value="">Select a project type</option>
+                  <option value="kitchen">Kitchen remodel</option>
+                  <option value="bathroom">Bathroom remodel</option>
+                  <option value="cabinetry">Custom cabinetry or storage</option>
+                  <option value="kitchen-bathroom">Kitchen and bathroom</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+                <p class="field-error" id="error-projectType"></p>
+              </div>
+              <fieldset class="form-field form-field--full" aria-describedby="error-contactMethod">
+                <legend>Preferred contact method <span class="req" aria-hidden="true">*</span></legend>
+                <div class="radio-row">
+                  <label class="choice"><input type="radio" name="contactMethod" value="email"> Email</label>
+                  <label class="choice"><input type="radio" name="contactMethod" value="phone"> Phone</label>
+                  <label class="choice"><input type="radio" name="contactMethod" value="either"> Either is fine</label>
+                </div>
+                <p class="field-error" id="error-contactMethod"></p>
+              </fieldset>
+              <div class="form-field">
+                <label for="budget">Approximate project budget <span class="optional">(optional)</span></label>
+                <select class="form-control" id="budget" name="budget">
+                  <option value="">Prefer not to say</option>
+                  <option value="discuss">I would like to discuss this</option>
+                  <option value="flexible">Flexible, depends on the design</option>
+                  <option value="defined">I have a defined range</option>
+                </select>
+                <span class="form-hint">No amounts are collected on this form.</span>
+              </div>
+              <div class="form-field">
+                <label for="timeframe">Desired timeframe <span class="req" aria-hidden="true">*</span></label>
+                <select class="form-control" id="timeframe" name="timeframe" required aria-describedby="error-timeframe">
+                  <option value="">Select a timeframe</option>
+                  <option value="soon">As soon as practical</option>
+                  <option value="3-6">In the next few months</option>
+                  <option value="6-12">Later this year or next</option>
+                  <option value="exploring">Just exploring ideas</option>
+                </select>
+                <p class="field-error" id="error-timeframe"></p>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="details">Project details <span class="req" aria-hidden="true">*</span></label>
+                <textarea class="form-control" id="details" name="details" required aria-describedby="details-hint error-details"></textarea>
+                <span class="form-hint" id="details-hint">What would you like to change? How do you use the space? Please avoid sharing sensitive personal information.</span>
+                <p class="field-error" id="error-details"></p>
+              </div>
+              <div class="form-field form-field--full">
+                <label class="choice" for="privacy" style="text-transform:none;letter-spacing:0;font-weight:400;align-items:flex-start;color:var(--charcoal)">
+                  <input type="checkbox" id="privacy" name="privacy" required aria-describedby="error-privacy" style="margin-top:.25rem">
+                  <span>I understand this is a demonstration form and that my entries are not sent or stored. <span class="req" aria-hidden="true">*</span></span>
+                </label>
+                <p class="field-error" id="error-privacy"></p>
+              </div>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn--primary" type="submit">Request a Consultation</button>
+              <button class="btn btn--ghost" type="reset">Clear Form</button>
+            </div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-aside" aria-label="Additional contact information">
+          <div class="aside-block">
+            <h2 style="font-size:1.6rem">What to include</h2>
+            <ul class="check-list">
+              <li>Which room or rooms you are considering</li>
+              <li>What is not working today</li>
+              <li>Styles or materials you are drawn to</li>
+              <li>Your preferred timeframe</li>
+            </ul>
+          </div>
+          <div class="aside-block">
+            <h2 style="font-size:1.6rem">Other ways to reach us</h2>
+            <p>AURELLE is a fictional concept, so no phone number, email address, street address or opening hours are shown.</p>
+            <p>On a real site, the business owner would add their genuine contact details here.</p>
+          </div>
+          <div class="aside-block">
+            <h2 style="font-size:1.6rem">Not ready yet?</h2>
+            <p><a href="process.html">View our process</a> or read the <a href="faq.html">FAQ</a> for planning guidance.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELLE Kitchen &amp; Bath — home"><span class="brand__name">AURELLE</span><span class="brand__desc">Kitchen &amp; Bath</span></a>
+          <p>A design-led kitchen and bathroom remodeling concept.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Service links">
+          <h2>Services</h2>
+          <ul class="footer-list">
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="kitchen-remodeling.html">Kitchen Remodeling</a></li>
+            <li><a href="bathroom-remodeling.html">Bathroom Remodeling</a></li>
+            <li><a href="custom-cabinetry.html">Custom Cabinetry</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Start a Project</h2>
+          <p>Describe your kitchen or bathroom plans and see how an inquiry could work.</p>
+          <a class="btn btn--light btn--sm" href="contact.html">Request a Consultation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclosure"><strong>Concept disclosure:</strong> AURELLE Kitchen &amp; Bath is a fictional portfolio demonstration created by Vantorax Studio. It is not an operating contractor. Photography is illustrative stock imagery, and no projects, credentials, reviews or contact details shown represent a real business.</p>
+        <small>&copy; <span data-year>2026</span> Vantorax Studio concept</small>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <script src="script.js" defer></script>
+</body>
+</html>
